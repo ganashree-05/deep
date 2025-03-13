@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> AI Deepfake Detector - Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">AI Deepfake Detector</div>
+        <nav>
+            <a href="{{ url_for('home') }}">Home</a>
+            <a href="{{ url_for('about') }}">About Us</a>
+            <a href="{{ url_for('logout') }}">Logout</a>
+        </nav>
+    </header>
+
+     <!-- Main Content -->
+    <div class="container">
+        <h2>Upload an Image for Analysis</h2>
+        <form action="/" method="post" enctype="multipart/form-data">
+            <label class="custom-file-upload">
+                <input type="file" name="file" id="fileInput" required>
+                <i class="fas fa-upload"></i> Choose File
+            </label>
+            <button type="submit"><i class="fas fa-search"></i> Predict</button>
+        </form>
+
+        {% if prediction %}
+            <div class="result">
+                <h2>Prediction: <span class="{{ 'real' if prediction == 'Real' else 'fake' }}">{{ prediction }}</span></h2>
+                <img src="{{ url_for('static', filename='uploads/' + filename) }}" alt="Uploaded Image">
+            </div>
+        {% endif %}
+    </div>
+
+    <!-- Footer with Three-Part Key Features -->
+    <footer>
+        <div class="Key features">
+            <div class="feature-box">
+                <i class="fas fa-brain"></i>
+                <h4>AI-Powered Analysis</h4>
+                <p>Uses deep learning to detect fake images accurately.</p>
+            </div>
+            <div class="feature-box">
+                <i class="fas fa-shield-alt"></i>
+                <h4>High Accuracy</h4>
+                <p>Trained on a large dataset for precise deepfake detection.</p>
+            </div>
+            <div class="feature-box">
+                <i class="fas fa-clock"></i>
+                <h4>Fast & Secure</h4>
+                <p>Instant results while ensuring data privacy.</p>
+            </div>
+        </div>
+        <p>© 2025 Deepfake Detector | AI & Machine Learning</p>
+    </footer>
+</body>
+</html>
