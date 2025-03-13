@@ -1,0 +1,174 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: white; /* Full White Background */
+    color: black;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header with Teal Background */
+header {
+    background: #1D7874; /* Teal */
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 50px;
+    font-size: 24px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+    color: #FFD700; /* Gold Hover Effect */
+}
+
+/* Main Container - White Background */
+.container {
+    background: white; /* White Middle Section */
+    color: black;
+    padding: 50px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    width: 50%;
+    margin: 50px auto;
+    text-align: center;
+    transition: 0.3s ease-in-out;
+    border: 2px solid #1D7874; /* Teal Border */
+}
+
+.container:hover {
+    transform: scale(1.02);
+}
+
+/* Custom File Upload Button */
+.custom-file-upload {
+    display: inline-block;
+    background-color: #1D7874; /* Teal */
+    color: white;
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition: 0.3s;
+    border: 2px solid white;
+}
+
+.custom-file-upload:hover {
+    background-color: #FFD700;
+    color: #1D7874;
+}
+
+.custom-file-upload input {
+    display: none;
+}
+
+/* Predict Button */
+button {
+    background-color: #1D7874; /* Teal */
+    color: white;
+    font-size: 18px;
+    padding: 15px 35px;
+    margin-top: 15px;
+    border: 2px solid white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #FFD700;
+    color: #1D7874;
+}
+
+/* Prediction Result */
+.result {
+    margin-top: 25px;
+}
+
+.result h2 {
+    font-size: 26px;
+    font-weight: bold;
+}
+
+/* Image Display */
+img {
+    max-width: 80%;
+    height: auto;
+    margin-top: 20px;
+    border-radius: 12px;
+    border: 3px solid #1D7874;
+}
+
+/* Prediction Colors */
+.real {
+    color: green;
+    font-weight: bold;
+}
+
+.fake {
+    color: red;
+    font-weight: bold;
+}
+
+/* Footer with Teal Background */
+footer {
+    background: #1D7874; /* Teal */
+    color: white;
+    padding: 40px 20px;
+    font-size: 18px;
+    box-shadow: 0px -4px 8px rgba(0, 0, 0, 0.2);
+    border-top: 2px solid white;
+}
+
+.footer-content {
+    max-width: 90%;
+    margin: auto;
+}
+
+/* Key Features in Footer */
+.features {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.feature-box {
+    flex: 1;
+    padding: 20px;
+    background: #1D7874;
+    color: white;
+    border-radius: 10px;
+    margin: 10px;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.2);
+    border: 2px solid white;
+}
+
+.feature-box i {
+    font-size: 35px;
+    margin-bottom: 10px;
+    color: #FFD700;
+}
+
+footer p {
+    text-align: center;
+    margin-top: 20px;
+}
